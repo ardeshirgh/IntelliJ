@@ -1,5 +1,7 @@
 package Ardeshir.ca;
 
+import java.math.BigDecimal;
+
 public class Main {
 
     //global static variables are automaticly initialized with value
@@ -54,8 +56,12 @@ public class Main {
         int test = (int)Math.pow(2,32)+1;
         System.out.println(test);
 
-        double dVal = 0.12;
+        double dVal = .012;
         double sum = dVal + dVal + dVal;
-        System.out.println(sum);
+        System.out.println("wrong calculation .12 + .12 + .12 =" + sum);
+
+        BigDecimal bigValue = new BigDecimal(Double.toString(dVal));
+        BigDecimal total = bigValue.add(bigValue).add(bigValue);
+        System.out.println("exact result of .12 + .12 + .12 =" + total);
     }
 }
