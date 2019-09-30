@@ -2,6 +2,11 @@ package Ardeshir.ca;
 
 public class Main {
 
+    //global static variables are automaticly initialized with value
+    // 0
+    static int intValue;
+
+
     public static void main(String[] args) {
 
         //different variables
@@ -29,5 +34,28 @@ public class Main {
         byte x = 127;
         int y = x;
         System.out.println(y);
+
+        // for long types use L at the end of value
+        long longValue =9_223_372_036_854_775_807l;//max long number
+        System.out.println(longValue);
+
+        double coffeePrice = 2.75d;// d is optional but better to use it
+        float teaPrice = 2.99f; // f is a must
+        int coffee = (int)coffeePrice;
+        System.out.println("the int coffee price : " + coffee); // 2
+        System.out.println("the rounded tea price : " + Math.round(teaPrice)); // 3
+        System.out.println("the rounded tea price : " + Math.floor(teaPrice)); // 2.0
+
+
+        System.out.println("(double)25 / 2 =" +  (double)25 / 2);
+        System.out.println("25d / 2 = " + 25d / 2);
+        System.out.println("25f / 2 = " + 25f / 2);
+
+        int test = (int)Math.pow(2,32)+1;
+        System.out.println(test);
+
+        double dVal = 0.12;
+        double sum = dVal + dVal + dVal;
+        System.out.println(sum);
     }
 }
